@@ -1,0 +1,101 @@
+/* General Reset */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #1d1d35; /* الخلفية الداكنة */
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    text-align: center;
+  }
+  
+  /* Timeline Container */
+  .timeline-container {
+    max-width: 800px;
+    width: 90%;
+  }
+  
+  h1 {
+    font-size: 2.5em;
+    margin-bottom: 5px;
+  }
+  
+  p {
+    font-size: 1.2em;
+    color: #ccc;
+    margin-bottom: 30px;
+  }
+  
+  /* Timeline */
+  .timeline {
+    position: relative;
+    padding: 20px 0;
+    margin-top: 20px;
+  }
+  
+  .timeline::before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 0;
+    bottom: 0;
+    width: 4px;
+    background-color: #ffc107; /* الخط العمودي */
+    transform: translateX(-50%);
+  }
+  
+  /* Timeline Items */
+  .timeline-item {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    position: relative;
+    margin-bottom: 20px;
+  }
+  
+  .timeline-item:nth-child(odd) .timeline-content {
+    align-items: flex-end;
+  }
+  
+  .timeline-date {
+    font-size: 1em;
+    color: #ffc107;
+    margin-bottom: 10px;
+  }
+  
+  .timeline-content {
+    background-color: #2d2d4d; /* الخلفية الداكنة للمحتوى */
+    padding: 15px;
+    border-radius: 8px;
+    position: relative;
+    max-width: 400px;
+    text-align: left;
+  }
+  
+  .timeline-content h3 {
+    margin: 0;
+    font-size: 1.3em;
+  }
+  
+  .timeline-content p {
+    margin: 10px 0 0;
+    font-size: 1em;
+    color: #ccc;
+  }
+  
+  /* Points on the Line */
+  .timeline-item::before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    width: 12px;
+    height: 12px;
+    background-color: #ffc107;
+    border-radius: 50%;
+    top: 0;
+    transform: translate(-50%, -50%);
+  }
+  
